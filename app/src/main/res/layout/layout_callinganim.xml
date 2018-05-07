@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+
+
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="0dp"
+       android:background="@android:color/white"
+       android:layout_weight="4">
+
+       <com.callinganim.demo.DirectionLine
+           android:id="@+id/directionLine1"
+           android:background="@android:color/white"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           />
+       <com.callinganim.demo.DirectionLine
+       android:id="@+id/directionLine2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:background="@android:color/transparent"
+       />
+   </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        >
+        <com.callinganim.demo.CircleImageView
+            android:id="@+id/leftClientImg"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/leftClientImg"
+            android:layout_toLeftOf="@+id/rightClientImg"
+            >
+
+
+            <com.callinganim.demo.CircularZoom
+                android:id="@+id/dashLine"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_toptip"
+                android:text="正在通话..."
+                android:layout_above="@+id/dashLine"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_bottomtip"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/dashLine"
+                android:text="正在通话..."
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+        <com.callinganim.demo.CircleImageView
+            android:background="@android:color/transparent"
+            android:id="@+id/rightClientImg"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
